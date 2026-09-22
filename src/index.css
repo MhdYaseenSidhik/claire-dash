@@ -73,16 +73,18 @@ input, select { font-family: inherit; }
   background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
-/* right fade mask — only visible when content overflows */
+/* right-fade gradient overlay — always shown to signal scrollable tabs.
+   Wider than before (64px) and uses an 80% stop so the fade is visible
+   even on wide viewports where only 1–2 tabs are hidden. */
 .tab-bar-wrap::after {
   content: "";
   position: absolute;
   top: 0; right: 0;
-  width: 48px; height: 100%;
-  background: linear-gradient(to right, transparent, var(--surface));
+  width: 64px; height: 100%;
+  background: linear-gradient(to right, transparent, var(--surface) 80%);
   pointer-events: none;
-  /* hidden by default; shown only on mobile */
-  display: none;
+  z-index: 1;
+  display: block;
 }
 .tab-bar-scroll {
   display: flex;
@@ -105,8 +107,6 @@ input, select { font-family: inherit; }
   .main-content { padding: 12px !important; }
   .charts-grid { grid-template-columns: 1fr !important; }
   .nm-sm-grid { grid-template-columns: 1fr !important; }
-  /* Show fade mask on mobile to hint at scrollable tabs */
-  .tab-bar-wrap::after { display: block; }
   /* Reduce left padding so first tab is flush on small screens */
   .tab-bar-scroll { padding: 0 12px; }
 }
