@@ -51,12 +51,9 @@ export default function OverviewTab({ data }: { data: any }) {
       </div>
 
       {/* Charts Row */}
-      <div className="charts-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
-        {/* Category Breakdown */}
+      <div className="charts-grid" style={{ display: "grid", gap: 16 }}>
         <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: 20 }}>
-          <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
-            Gross Value by Category
-          </div>
+          <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>Gross Value by Category</div>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={category_breakdown} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2)" />
@@ -72,12 +69,8 @@ export default function OverviewTab({ data }: { data: any }) {
             </BarChart>
           </ResponsiveContainer>
         </div>
-
-        {/* Plant Breakdown */}
         <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: 20 }}>
-          <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
-            Gross Value by Plant
-          </div>
+          <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>Gross Value by Plant</div>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={plant_breakdown} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2)" />
@@ -97,9 +90,7 @@ export default function OverviewTab({ data }: { data: any }) {
 
       {/* Monthly Consumption Chart */}
       <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: 20 }}>
-        <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
-          Monthly Consumption Value — Oct 2025 to Sep 2026
-        </div>
+        <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>Monthly Consumption Value — Oct 2025 to Sep 2026</div>
         <ResponsiveContainer width="100%" height={200}>
           <BarChart data={monthly_actual} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2)" />
@@ -136,17 +127,13 @@ export default function OverviewTab({ data }: { data: any }) {
             <tbody>
               {inventory.map((m: any, i: number) => (
                 <tr key={m.Material_Code}
-                  style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)" }}
+                  style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--row-alt)" }}
                   onMouseEnter={e => (e.currentTarget.style.background = "rgba(6,182,212,0.05)")}
-                  onMouseLeave={e => (e.currentTarget.style.background = i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)")}
+                  onMouseLeave={e => (e.currentTarget.style.background = i % 2 === 0 ? "transparent" : "var(--row-alt)")}
                 >
                   <td style={{ padding: "9px 12px", color: "var(--accent)", fontWeight: 500, whiteSpace: "nowrap" }}>{m.Material_Code}</td>
                   <td style={{ padding: "9px 12px", color: "var(--text)" }}>{m.Description}</td>
-                  <td style={{ padding: "9px 12px" }}>
-                    <span style={{ fontSize: 11, padding: "2px 6px", borderRadius: 3, background: "var(--surface-2)", color: "var(--text-muted)" }}>
-                      {m.Category}
-                    </span>
-                  </td>
+                  <td style={{ padding: "9px 12px" }}><span style={{ fontSize: 11, padding: "2px 6px", borderRadius: 3, background: "var(--surface-2)", color: "var(--text-muted)" }}>{m.Category}</span></td>
                   <td style={{ padding: "9px 12px", color: "var(--text-muted)" }}>{m.Plant}</td>
                   <td style={{ padding: "9px 12px", textAlign: "right", color: "var(--text)", fontVariantNumeric: "tabular-nums" }}>{m.Current_Stock.toLocaleString()}</td>
                   <td style={{ padding: "9px 12px", textAlign: "right", color: "var(--text-muted)", fontVariantNumeric: "tabular-nums" }}>{m.Safety_Stock}</td>
@@ -156,14 +143,10 @@ export default function OverviewTab({ data }: { data: any }) {
                     {m.DOH >= 9999 ? "∞" : m.DOH}
                   </td>
                   <td style={{ padding: "9px 12px" }}>
-                    {m.NM_Flag && (
-                      <span style={{ fontSize: 10, padding: "2px 6px", borderRadius: 3, background: "rgba(239,68,68,0.15)", color: "var(--danger)", fontWeight: 600 }}>NM</span>
-                    )}
+                    {m.NM_Flag && <span style={{ fontSize: 10, padding: "2px 6px", borderRadius: 3, background: "rgba(239,68,68,0.15)", color: "var(--danger)", fontWeight: 600 }}>NM</span>}
                   </td>
                   <td style={{ padding: "9px 12px" }}>
-                    {m.SM_Flag && (
-                      <span style={{ fontSize: 10, padding: "2px 6px", borderRadius: 3, background: "rgba(245,158,11,0.15)", color: "var(--warning)", fontWeight: 600 }}>SM</span>
-                    )}
+                    {m.SM_Flag && <span style={{ fontSize: 10, padding: "2px 6px", borderRadius: 3, background: "rgba(245,158,11,0.15)", color: "var(--warning)", fontWeight: 600 }}>SM</span>}
                   </td>
                   <td style={{ padding: "9px 12px" }}>
                     <span style={{
