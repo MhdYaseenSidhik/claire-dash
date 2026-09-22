@@ -25,20 +25,30 @@ export default function KPICard({ label, value, target, status = "info", delta, 
     info:   "rgba(6,182,212,0.12)",
   }[status];
 
+  // Build a concise accessible label: "Gross Inventory Value: ₹12,34,567. Target: ₹10L."
+  const ariaLabel = [
+    `${label}: ${value}`,
+    delta ? `Change: ${delta}` : "",
+    subtitle ? subtitle : "",
+    target ? `Target: ${target}` : "",
+  ].filter(Boolean).join(". ");
+
   return (
-    <div style={{
-      background: "var(--surface)",
-      border: "1px solid var(--border)",
-      borderLeft: accent ? `3px solid ${statusColor}` : "1px solid var(--border)",
-      borderRadius: "var(--radius)",
-      padding: "16px 20px",
-      boxShadow: "var(--shadow)",
-      minWidth: 0,
-      transition: "background 0.15s",
-      cursor: "default",
-    }}
-    onMouseEnter={e => (e.currentTarget.style.background = "var(--surface-2)")}
-    onMouseLeave={e => (e.currentTarget.style.background = "var(--surface)")}
+    <div
+      className="kpi-card"
+      role="region"
+      aria-label={ariaLabel}
+      style={{
+        background: "var(--surface)",
+        border: "1px solid var(--border)",
+        borderLeft: accent ? `3px solid ${statusColor}` : "1px solid var(--border)",
+        borderRadius: "var(--radius)",
+        padding: "16px 20px",
+        boxShadow: "var(--shadow)",
+        minWidth: 0,
+        transition: "background 0.15s",
+        cursor: "default",
+      }}
     >
       <div style={{ fontSize: 11, fontWeight: 500, color: "var(--text-dim)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 8 }}>
         {label}
