@@ -111,6 +111,35 @@ input, select { font-family: inherit; }
   .tab-bar-scroll { padding: 0 12px; }
 }
 
+/* ── KPI card hover (CSS hover, no JS event handlers) ───────────────── */
+.kpi-card:hover {
+  background: var(--surface-2) !important;
+}
+
+/* ── Table row hover ─────────────────────────────────────────────────── */
+tr.data-row:hover td {
+  background: var(--surface-2) !important;
+  transition: background 0.15s;
+}
+
+/* Generic tbody tr hover for tables that don't use .data-row */
+tbody tr:hover td {
+  background: var(--surface-2) !important;
+  transition: background 0.15s;
+}
+
+/* ── Section toggle buttons ──────────────────────────────────────────── */
+button[aria-pressed] {
+  transition: background 0.15s, color 0.15s;
+}
+button[aria-pressed]:hover {
+  background: var(--surface-2) !important;
+}
+button[aria-pressed="true"] {
+  background: var(--accent) !important;
+  color: #0f172a !important;
+}
+
 /* ── Reduced motion ──────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
