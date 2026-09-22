@@ -1,6 +1,6 @@
 
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine
 } from "recharts";
 import KPICard from "./KPICard";
 
@@ -104,16 +104,39 @@ export default function OverviewTab({ data }: { data: any }) {
         <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
           Monthly Consumption Value — Oct 2025 to Sep 2026
         </div>
-        <ResponsiveContainer width="100%" height={200}>
-          <BarChart data={monthly_actual} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2)" />
-            <XAxis dataKey="Month" tick={{ fill: "var(--text-muted)", fontSize: 10 }} axisLine={false} tickLine={false} />
-            <YAxis tick={{ fill: "var(--text-muted)", fontSize: 10 }} axisLine={false} tickLine={false}
-              tickFormatter={(v) => `₹${(v/100000).toFixed(1)}L`} />
-            <Tooltip content={<CustomTooltip />} />
-            <Bar dataKey="Actual_Consumption_Value" fill="var(--accent)" radius={[3,3,0,0]} />
-          </BarChart>
-        </ResponsiveContainer>
+        {(() => {
+          const currentMonthIndex = monthly_actual.length - 1;
+          const avgConsumption = monthly_actual.length > 0
+            ? monthly_actual.reduce((s: number, r: any) => s + r.Actual_Consumption_Value, 0) / monthly_actual.length
+            : 0;
+          return (
+            <ResponsiveContainer width="100%" height={200}>
+              <BarChart data={monthly_actual} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2)" />
+                <XAxis dataKey="Month" tick={{ fill: "var(--text-muted)", fontSize: 10 }} axisLine={false} tickLine={false} />
+                <YAxis tick={{ fill: "var(--text-muted)", fontSize: 10 }} axisLine={false} tickLine={false}
+                  tickFormatter={(v) => `₹${(v/100000).toFixed(1)}L`} />
+                <Tooltip content={<CustomTooltip />} />
+                <ReferenceLine
+                  y={avgConsumption}
+                  stroke="var(--accent)"
+                  strokeDasharray="4 4"
+                  strokeOpacity={0.6}
+                  label={{ value: "Avg", position: "insideTopRight", fill: "var(--text-muted)", fontSize: 10 }}
+                />
+                <Bar dataKey="Actual_Consumption_Value" radius={[3,3,0,0]}>
+                  {monthly_actual.map((_: any, i: number) => (
+                    <Cell
+                      key={i}
+                      fill="var(--accent)"
+                      fillOpacity={i === currentMonthIndex ? 1 : 0.35}
+                    />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          );
+        })()}
       </div>
 
       {/* Inventory Table */}
@@ -123,7 +146,7 @@ export default function OverviewTab({ data }: { data: any }) {
           <span style={{ fontSize: 11, color: "var(--text-muted)" }}>Snapshot: 2026-09-01</span>
         </div>
         <div style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
+          <table style={{ width: "100%", minWidth: 900, borderCollapse: "collapse", fontSize: 12 }}>
             <thead>
               <tr style={{ background: "var(--surface-2)" }}>
                 {["Code","Description","Category","Plant","Stock","Safety Stk","Unit Cost","Gross Value","DOH","NM","SM","Criticality"].map(h => (
