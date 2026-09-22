@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# claire-dash — Inventory & Forecasting Cell Dashboard
 
-## Getting Started
+Next.js 16 + TypeScript + Tailwind v4 + Recharts dashboard for the Inventory & Forecasting Cell.
 
-First, run the development server:
+## What it does
+
+Publishes a full SAP-extract analysis to a live dashboard with five tabs:
+- **Overview** — headline KPIs (gross inventory value, turnover, DOH, NMI/SMI counts, critical spares availability, forecast accuracy)
+- **Forecasts** — 3/6/12-month material demand forecasts from the MCP engine, forecast-vs-actual chart
+- **Alerts** — overstock, understock, NM/SM trending materials with inventory-value opportunity
+- **PR Recommendations** — prioritised purchase requisition table with suggested dates and quantities
+- **Data Quality** — data profiling findings, missing fields, duplicate candidates
+
+## Data
+
+`app/data/inventory_data.json` — generated from mock_inventory_input_data.xlsx (18 materials × 20 columns, snapshot 2026-09-01, 217 monthly consumption rows Oct-2025 to Sep-2026).
+
+## Running
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Dev server: `npm run dev`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Ticket
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+S-1 — Analyse SAP extract and publish full inventory dashboard to claire-dash

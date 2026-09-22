@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import data from "./data/inventory_data.json";
 import OverviewTab from "./components/OverviewTab";
@@ -8,15 +7,24 @@ import PRTab from "./components/PRTab";
 import DataQualityTab from "./components/DataQualityTab";
 
 const TABS = [
-  { id: "overview",     label: "Overview" },
-  { id: "forecasts",    label: "Forecasts" },
-  { id: "alerts",       label: "Alerts" },
-  { id: "pr",           label: "PR Recommendations" },
-  { id: "dataquality",  label: "Data Quality" },
+  { id: "overview",    label: "Overview" },
+  { id: "forecasts",   label: "Forecasts" },
+  { id: "alerts",      label: "Alerts" },
+  { id: "pr",          label: "PR Recommendations" },
+  { id: "dataquality", label: "Data Quality" },
 ];
 
-export default function Home() {
+export default function App() {
   const [tab, setTab] = useState("overview");
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const d = data as any;
+  const totalAlerts =
+    (d.kpis?.overstocked_count ?? 0) +
+    (d.kpis?.understocked_count ?? 0) +
+    (d.kpis?.nmi_count ?? 0) +
+    (d.kpis?.smi_count ?? 0) +
+    (d.nm_sm_predictions?.length ?? 0);
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
@@ -50,7 +58,7 @@ export default function Home() {
             marginLeft: 4
           }}>claire-dash</span>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+        <div className="header-meta">
           <span style={{ fontSize: 12, color: "var(--text-muted)" }}>
             Snapshot: <strong style={{ color: "var(--text)" }}>2026-09-01</strong>
           </span>
@@ -65,44 +73,59 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Tab Bar */}
-      <div style={{
-        background: "var(--surface)",
-        borderBottom: "1px solid var(--border)",
-        padding: "0 24px",
-        display: "flex",
-        gap: 0,
-        overflowX: "auto",
-      }}>
-        {TABS.map(t => (
-          <button
-            key={t.id}
-            onClick={() => setTab(t.id)}
-            style={{
-              padding: "12px 16px",
-              fontSize: 13,
-              fontWeight: tab === t.id ? 600 : 400,
-              color: tab === t.id ? "var(--accent)" : "var(--text-muted)",
-              borderBottom: tab === t.id ? "2px solid var(--accent)" : "2px solid transparent",
-              whiteSpace: "nowrap",
-              transition: "color 0.15s, border-color 0.15s",
-              background: "none",
-            }}
-          >
-            {t.label}
-            {t.id === "alerts" && (
-              <span style={{
-                marginLeft: 6, fontSize: 10, padding: "1px 5px",
-                borderRadius: 10, background: "var(--danger)",
-                color: "#fff", fontWeight: 700
-              }}>17</span>
-            )}
-          </button>
-        ))}
+      {/* Tab Bar — wrapped for mobile fade-mask scroll affordance */}
+      <div className="tab-bar-wrap">
+        <div
+          role="tablist"
+          aria-label="Dashboard sections"
+          className="tab-bar-scroll"
+        >
+          {TABS.map(t => (
+            <button
+              key={t.id}
+              id={`tab-${t.id}`}
+              onClick={() => setTab(t.id)}
+              aria-selected={tab === t.id}
+              aria-controls="tabpanel"
+              role="tab"
+              style={{
+                padding: "12px 16px",
+                fontSize: 13,
+                fontWeight: tab === t.id ? 600 : 400,
+                color: tab === t.id ? "var(--accent)" : "var(--text-muted)",
+                borderBottom: tab === t.id ? "2px solid var(--accent)" : "2px solid transparent",
+                whiteSpace: "nowrap",
+                transition: "color 0.15s, border-color 0.15s",
+                background: "none",
+                minHeight: 40,
+              }}
+            >
+              {t.label}
+              {t.id === "alerts" && totalAlerts > 0 && (
+                <>
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      marginLeft: 6, fontSize: 10, padding: "1px 5px",
+                      borderRadius: 10, background: "var(--danger)",
+                      color: "#fff", fontWeight: 700
+                    }}>{totalAlerts}</span>
+                  <span className="sr-only">, {totalAlerts} alerts</span>
+                </>
+              )}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Tab Content */}
-      <main style={{ padding: "24px", maxWidth: 1280, margin: "0 auto" }}>
+      <main
+        id="tabpanel"
+        role="tabpanel"
+        aria-labelledby={`tab-${tab}`}
+        className="main-content"
+        style={{ padding: "24px", maxWidth: 1280, margin: "0 auto" }}
+      >
         {tab === "overview"    && <OverviewTab data={data} />}
         {tab === "forecasts"   && <ForecastsTab data={data} />}
         {tab === "alerts"      && <AlertsTab data={data} />}

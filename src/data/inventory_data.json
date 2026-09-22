@@ -1,0 +1,2428 @@
+{
+  "generated_at": "2026-09-22T13:59:47Z",
+  "snapshot_date": "2026-09-01",
+  "kpis": {
+    "gross_inventory_value": 1933060,
+    "inventory_turnover": 0.91,
+    "nmi_count": 7,
+    "smi_count": 11,
+    "critical_spares_availability": 100.0,
+    "critical_spares_available": 5,
+    "critical_spares_total": 5,
+    "forecast_accuracy": 90.4,
+    "total_materials": 18,
+    "total_plants": 3,
+    "overstocked_count": 10,
+    "understocked_count": 0,
+    "pr_suggestions_count": 1,
+    "targets": {
+      "gross_inventory_reduction": "\u226510%",
+      "nmi_target": "\u226410%",
+      "smi_target": "\u226420%",
+      "forecast_accuracy_target": ">90%",
+      "critical_spares_availability_target": ">95%"
+    }
+  },
+  "inventory": [
+    {
+      "Material_Code": "MAT-1001",
+      "Description": "Bearing SKF 6205",
+      "Category": "Mechanical",
+      "Plant": "Plant-01",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 30,
+      "Unit_Cost": 850,
+      "Current_Stock": 120,
+      "Safety_Stock": 20,
+      "Reorder_Point": 35,
+      "Avg_Monthly_Consumption": 18,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 102000,
+      "DOH": 200.0,
+      "Annual_Cons_Value": 172550,
+      "Overstock_Threshold": 36.0,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 14379.17
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Description": "Gearbox Assembly 7.5kW",
+      "Category": "Mechanical",
+      "Plant": "Plant-01",
+      "Criticality": "Critical",
+      "NM_Flag": true,
+      "SM_Flag": false,
+      "Lead_Time_Days": 90,
+      "Unit_Cost": 175000,
+      "Current_Stock": 4,
+      "Safety_Stock": 2,
+      "Reorder_Point": 3,
+      "Avg_Monthly_Consumption": 0,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 700000,
+      "DOH": 9999.0,
+      "Annual_Cons_Value": 0,
+      "Overstock_Threshold": 9999.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 0.0
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Description": "V-Belt A-42",
+      "Category": "Mechanical",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 15,
+      "Unit_Cost": 320,
+      "Current_Stock": 200,
+      "Safety_Stock": 40,
+      "Reorder_Point": 60,
+      "Avg_Monthly_Consumption": 35,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 64000,
+      "DOH": 171.4,
+      "Annual_Cons_Value": 131200,
+      "Overstock_Threshold": 35.0,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 10933.33
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Description": "Mechanical Seal 50mm",
+      "Category": "Mechanical",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "NM_Flag": true,
+      "SM_Flag": false,
+      "Lead_Time_Days": 45,
+      "Unit_Cost": 2800,
+      "Current_Stock": 8,
+      "Safety_Stock": 5,
+      "Reorder_Point": 7,
+      "Avg_Monthly_Consumption": 0,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 22400,
+      "DOH": 9999.0,
+      "Annual_Cons_Value": 0,
+      "Overstock_Threshold": 9999.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 0.0
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Description": "Coupling Jaw Insert",
+      "Category": "Mechanical",
+      "Plant": "Plant-03",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 21,
+      "Unit_Cost": 1200,
+      "Current_Stock": 55,
+      "Safety_Stock": 10,
+      "Reorder_Point": 18,
+      "Avg_Monthly_Consumption": 8,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 66000,
+      "DOH": 206.2,
+      "Annual_Cons_Value": 116400,
+      "Overstock_Threshold": 11.2,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 9700.0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Description": "Motor 11kW 4-Pole",
+      "Category": "Electrical",
+      "Plant": "Plant-01",
+      "Criticality": "Critical",
+      "NM_Flag": true,
+      "SM_Flag": false,
+      "Lead_Time_Days": 60,
+      "Unit_Cost": 42000,
+      "Current_Stock": 3,
+      "Safety_Stock": 2,
+      "Reorder_Point": 3,
+      "Avg_Monthly_Consumption": 0,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 126000,
+      "DOH": 9999.0,
+      "Annual_Cons_Value": 0,
+      "Overstock_Threshold": 9999.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 0.0
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Description": "Contactor 32A",
+      "Category": "Electrical",
+      "Plant": "Plant-01",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 20,
+      "Unit_Cost": 680,
+      "Current_Stock": 85,
+      "Safety_Stock": 15,
+      "Reorder_Point": 25,
+      "Avg_Monthly_Consumption": 12,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 57800,
+      "DOH": 212.5,
+      "Annual_Cons_Value": 95880,
+      "Overstock_Threshold": 16.0,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 7990.0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Description": "Cable XLPE 4C\u00d710mm\u00b2",
+      "Category": "Electrical",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "NM_Flag": true,
+      "SM_Flag": false,
+      "Lead_Time_Days": 30,
+      "Unit_Cost": 480,
+      "Current_Stock": 12,
+      "Safety_Stock": 8,
+      "Reorder_Point": 12,
+      "Avg_Monthly_Consumption": 0,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 5760,
+      "DOH": 9999.0,
+      "Annual_Cons_Value": 0,
+      "Overstock_Threshold": 9999.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 0.0
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Description": "Fuse 63A HRC",
+      "Category": "Electrical",
+      "Plant": "Plant-03",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 10,
+      "Unit_Cost": 10,
+      "Current_Stock": 500,
+      "Safety_Stock": 80,
+      "Reorder_Point": 120,
+      "Avg_Monthly_Consumption": 65,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 5000,
+      "DOH": 230.8,
+      "Annual_Cons_Value": 7530,
+      "Overstock_Threshold": 43.3,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 627.5
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Description": "PLC Module Siemens S7",
+      "Category": "Automation",
+      "Plant": "Plant-01",
+      "Criticality": "Critical",
+      "NM_Flag": true,
+      "SM_Flag": false,
+      "Lead_Time_Days": 75,
+      "Unit_Cost": 68000,
+      "Current_Stock": 2,
+      "Safety_Stock": 1,
+      "Reorder_Point": 2,
+      "Avg_Monthly_Consumption": 0,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 136000,
+      "DOH": 9999.0,
+      "Annual_Cons_Value": 0,
+      "Overstock_Threshold": 9999.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 0.0
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Description": "VFD 7.5kW ABB",
+      "Category": "Automation",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 45,
+      "Unit_Cost": 38000,
+      "Current_Stock": 5,
+      "Safety_Stock": 2,
+      "Reorder_Point": 3,
+      "Avg_Monthly_Consumption": 1,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 190000,
+      "DOH": 150.0,
+      "Annual_Cons_Value": 456000,
+      "Overstock_Threshold": 3.0,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 38000.0
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Description": "Pressure Transmitter",
+      "Category": "Instrumentation",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 35,
+      "Unit_Cost": 12500,
+      "Current_Stock": 14,
+      "Safety_Stock": 4,
+      "Reorder_Point": 7,
+      "Avg_Monthly_Consumption": 2,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 175000,
+      "DOH": 210.0,
+      "Annual_Cons_Value": 300000,
+      "Overstock_Threshold": 4.7,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 25000.0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Description": "Flow Meter DN50",
+      "Category": "Instrumentation",
+      "Plant": "Plant-03",
+      "Criticality": "Normal",
+      "NM_Flag": true,
+      "SM_Flag": false,
+      "Lead_Time_Days": 50,
+      "Unit_Cost": 28000,
+      "Current_Stock": 3,
+      "Safety_Stock": 2,
+      "Reorder_Point": 3,
+      "Avg_Monthly_Consumption": 0,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 84000,
+      "DOH": 9999.0,
+      "Annual_Cons_Value": 0,
+      "Overstock_Threshold": 9999.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 0.0
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Description": "Temperature Sensor PT100",
+      "Category": "Instrumentation",
+      "Plant": "Plant-01",
+      "Criticality": "Critical",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 25,
+      "Unit_Cost": 3200,
+      "Current_Stock": 22,
+      "Safety_Stock": 6,
+      "Reorder_Point": 10,
+      "Avg_Monthly_Consumption": 4,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 70400,
+      "DOH": 165.0,
+      "Annual_Cons_Value": 137600,
+      "Overstock_Threshold": 6.7,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 11466.67
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Description": "Grease Mobilux EP2 (kg)",
+      "Category": "Consumable",
+      "Plant": "Plant-01",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 7,
+      "Unit_Cost": 180,
+      "Current_Stock": 180,
+      "Safety_Stock": 30,
+      "Reorder_Point": 50,
+      "Avg_Monthly_Consumption": 28,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 32400,
+      "DOH": 192.9,
+      "Annual_Cons_Value": 55080,
+      "Overstock_Threshold": 13.1,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 4590.0
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Description": "Hydraulic Oil ISO 46 (L)",
+      "Category": "Consumable",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 7,
+      "Unit_Cost": 95,
+      "Current_Stock": 420,
+      "Safety_Stock": 60,
+      "Reorder_Point": 90,
+      "Avg_Monthly_Consumption": 55,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 39900,
+      "DOH": 229.1,
+      "Annual_Cons_Value": 59660,
+      "Overstock_Threshold": 25.7,
+      "Is_Overstock": true,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 4971.67
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Description": "Cleaning Solvent (L)",
+      "Category": "Consumable",
+      "Plant": "Plant-03",
+      "Criticality": "Normal",
+      "NM_Flag": true,
+      "SM_Flag": false,
+      "Lead_Time_Days": 7,
+      "Unit_Cost": 60,
+      "Current_Stock": 15,
+      "Safety_Stock": 10,
+      "Reorder_Point": 15,
+      "Avg_Monthly_Consumption": 0,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 900,
+      "DOH": 9999.0,
+      "Annual_Cons_Value": 0,
+      "Overstock_Threshold": 9999.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 0.0
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Description": "Safety Valve 2-inch",
+      "Category": "Mechanical",
+      "Plant": "Plant-03",
+      "Criticality": "Critical",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Lead_Time_Days": 60,
+      "Unit_Cost": 18500,
+      "Current_Stock": 3,
+      "Safety_Stock": 1,
+      "Reorder_Point": 2,
+      "Avg_Monthly_Consumption": 1,
+      "Snapshot_Date": "2026-09-01",
+      "Gross_Value": 55500,
+      "DOH": 90.0,
+      "Annual_Cons_Value": 222000,
+      "Overstock_Threshold": 4.0,
+      "Is_Overstock": false,
+      "Is_Understock": false,
+      "Avg_Monthly_Cons_Value": 18500.0
+    }
+  ],
+  "monthly_consumption": [
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2025-10",
+      "Qty": 19,
+      "Value": 16150
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2025-11",
+      "Qty": 15,
+      "Value": 12750
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2025-12",
+      "Qty": 20,
+      "Value": 17000
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-01",
+      "Qty": 21,
+      "Value": 17850
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-02",
+      "Qty": 13,
+      "Value": 11050
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-03",
+      "Qty": 14,
+      "Value": 11900
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-04",
+      "Qty": 18,
+      "Value": 15300
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-05",
+      "Qty": 17,
+      "Value": 14450
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-06",
+      "Qty": 18,
+      "Value": 15300
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-07",
+      "Qty": 13,
+      "Value": 11050
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-08",
+      "Qty": 18,
+      "Value": 15300
+    },
+    {
+      "Material_Code": "MAT-1001",
+      "Plant": "Plant-01",
+      "Month": "2026-09",
+      "Qty": 17,
+      "Value": 14450
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2025-10",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2025-11",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2025-12",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-01",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-02",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-03",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-04",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-05",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-06",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-07",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-08",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1002",
+      "Plant": "Plant-01",
+      "Month": "2026-09",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2025-10",
+      "Qty": 35,
+      "Value": 11200
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2025-11",
+      "Qty": 41,
+      "Value": 13120
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2025-12",
+      "Qty": 37,
+      "Value": 11840
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-01",
+      "Qty": 30,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-02",
+      "Qty": 37,
+      "Value": 11840
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-03",
+      "Qty": 30,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-04",
+      "Qty": 40,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-05",
+      "Qty": 35,
+      "Value": 11200
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-06",
+      "Qty": 34,
+      "Value": 10880
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-07",
+      "Qty": 26,
+      "Value": 8320
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-08",
+      "Qty": 36,
+      "Value": 11520
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Plant": "Plant-02",
+      "Month": "2026-09",
+      "Qty": 29,
+      "Value": 9280
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2025-10",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2025-11",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2025-12",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-01",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-02",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-03",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-04",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-05",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-06",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-07",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-08",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1004",
+      "Plant": "Plant-02",
+      "Month": "2026-09",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2025-10",
+      "Qty": 7,
+      "Value": 8400
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2025-11",
+      "Qty": 8,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2025-12",
+      "Qty": 9,
+      "Value": 10800
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-01",
+      "Qty": 8,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-02",
+      "Qty": 8,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-03",
+      "Qty": 9,
+      "Value": 10800
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-04",
+      "Qty": 11,
+      "Value": 13200
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-05",
+      "Qty": 8,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-06",
+      "Qty": 7,
+      "Value": 8400
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-07",
+      "Qty": 6,
+      "Value": 7200
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-08",
+      "Qty": 8,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Plant": "Plant-03",
+      "Month": "2026-09",
+      "Qty": 8,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2025-10",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2025-11",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2025-12",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-01",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-02",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-03",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-04",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-05",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-06",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-07",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-08",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Plant": "Plant-01",
+      "Month": "2026-09",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2025-10",
+      "Qty": 12,
+      "Value": 8160
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2025-11",
+      "Qty": 10,
+      "Value": 6800
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2025-12",
+      "Qty": 11,
+      "Value": 7480
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-01",
+      "Qty": 13,
+      "Value": 8840
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-02",
+      "Qty": 13,
+      "Value": 8840
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-03",
+      "Qty": 13,
+      "Value": 8840
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-04",
+      "Qty": 11,
+      "Value": 7480
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-05",
+      "Qty": 12,
+      "Value": 8160
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-06",
+      "Qty": 12,
+      "Value": 8160
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-07",
+      "Qty": 11,
+      "Value": 7480
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-08",
+      "Qty": 12,
+      "Value": 8160
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Plant": "Plant-01",
+      "Month": "2026-09",
+      "Qty": 11,
+      "Value": 7480
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2025-10",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2025-11",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2025-12",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-01",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-02",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-03",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-04",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-05",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-06",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-07",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-08",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1008",
+      "Plant": "Plant-02",
+      "Month": "2026-09",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2025-10",
+      "Qty": 72,
+      "Value": 720
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2025-11",
+      "Qty": 66,
+      "Value": 660
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2025-12",
+      "Qty": 68,
+      "Value": 680
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-01",
+      "Qty": 71,
+      "Value": 710
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-02",
+      "Qty": 51,
+      "Value": 510
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-03",
+      "Qty": 62,
+      "Value": 620
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-04",
+      "Qty": 60,
+      "Value": 600
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-05",
+      "Qty": 59,
+      "Value": 590
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-06",
+      "Qty": 62,
+      "Value": 620
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-07",
+      "Qty": 70,
+      "Value": 700
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-08",
+      "Qty": 47,
+      "Value": 470
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Plant": "Plant-03",
+      "Month": "2026-09",
+      "Qty": 65,
+      "Value": 650
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2025-10",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2025-11",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2025-12",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-01",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-02",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-03",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-04",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-05",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-06",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-07",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-08",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Plant": "Plant-01",
+      "Month": "2026-09",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2025-10",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2025-11",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2025-12",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-01",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-02",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-03",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-04",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-05",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-06",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-07",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-08",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Plant": "Plant-02",
+      "Month": "2026-09",
+      "Qty": 1,
+      "Value": 38000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2025-10",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2025-11",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2025-12",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-01",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-02",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-03",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-04",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-05",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-06",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-07",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-08",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Plant": "Plant-02",
+      "Month": "2026-09",
+      "Qty": 2,
+      "Value": 25000
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2025-10",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2025-11",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2025-12",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-01",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-02",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-03",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-04",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-05",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-06",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-07",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-08",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1013",
+      "Plant": "Plant-03",
+      "Month": "2026-09",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2025-10",
+      "Qty": 3,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2025-11",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2025-12",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-01",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-02",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-03",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-04",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-05",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-06",
+      "Qty": 4,
+      "Value": 12800
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-07",
+      "Qty": 3,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-08",
+      "Qty": 2,
+      "Value": 6400
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Plant": "Plant-01",
+      "Month": "2026-09",
+      "Qty": 3,
+      "Value": 9600
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2025-10",
+      "Qty": 22,
+      "Value": 3960
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2025-11",
+      "Qty": 24,
+      "Value": 4320
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2025-12",
+      "Qty": 30,
+      "Value": 5400
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-01",
+      "Qty": 24,
+      "Value": 4320
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-02",
+      "Qty": 26,
+      "Value": 4680
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-03",
+      "Qty": 33,
+      "Value": 5940
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-04",
+      "Qty": 27,
+      "Value": 4860
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-05",
+      "Qty": 31,
+      "Value": 5580
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-06",
+      "Qty": 24,
+      "Value": 4320
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-07",
+      "Qty": 23,
+      "Value": 4140
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-08",
+      "Qty": 20,
+      "Value": 3600
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Plant": "Plant-01",
+      "Month": "2026-09",
+      "Qty": 22,
+      "Value": 3960
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2025-10",
+      "Qty": 62,
+      "Value": 5890
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2025-11",
+      "Qty": 41,
+      "Value": 3895
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2025-12",
+      "Qty": 59,
+      "Value": 5605
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-01",
+      "Qty": 57,
+      "Value": 5415
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-02",
+      "Qty": 50,
+      "Value": 4750
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-03",
+      "Qty": 43,
+      "Value": 4085
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-04",
+      "Qty": 56,
+      "Value": 5320
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-05",
+      "Qty": 51,
+      "Value": 4845
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-06",
+      "Qty": 57,
+      "Value": 5415
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-07",
+      "Qty": 47,
+      "Value": 4465
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-08",
+      "Qty": 60,
+      "Value": 5700
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Plant": "Plant-02",
+      "Month": "2026-09",
+      "Qty": 45,
+      "Value": 4275
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2025-10",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2025-11",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2025-12",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-01",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-02",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-03",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-04",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-05",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-06",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-07",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-08",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1017",
+      "Plant": "Plant-03",
+      "Month": "2026-09",
+      "Qty": 0,
+      "Value": 0
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2025-10",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2025-11",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2025-12",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-01",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-02",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-03",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-04",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-05",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-06",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-07",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-08",
+      "Qty": 1,
+      "Value": 18500
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Plant": "Plant-03",
+      "Month": "2026-09",
+      "Qty": 1,
+      "Value": 18500
+    }
+  ],
+  "monthly_actual": [
+    {
+      "Month": "2025-10",
+      "Actual_Consumption_Value": 145580
+    },
+    {
+      "Month": "2025-11",
+      "Actual_Consumption_Value": 145445
+    },
+    {
+      "Month": "2025-12",
+      "Actual_Consumption_Value": 153105
+    },
+    {
+      "Month": "2026-01",
+      "Actual_Consumption_Value": 150635
+    },
+    {
+      "Month": "2026-02",
+      "Actual_Consumption_Value": 145570
+    },
+    {
+      "Month": "2026-03",
+      "Actual_Consumption_Value": 146085
+    },
+    {
+      "Month": "2026-04",
+      "Actual_Consumption_Value": 153860
+    },
+    {
+      "Month": "2026-05",
+      "Actual_Consumption_Value": 148725
+    },
+    {
+      "Month": "2026-06",
+      "Actual_Consumption_Value": 147395
+    },
+    {
+      "Month": "2026-07",
+      "Actual_Consumption_Value": 134455
+    },
+    {
+      "Month": "2026-08",
+      "Actual_Consumption_Value": 142250
+    },
+    {
+      "Month": "2026-09",
+      "Actual_Consumption_Value": 140795
+    }
+  ],
+  "overstock": [
+    {
+      "Material_Code": "MAT-1001",
+      "Description": "Bearing SKF 6205",
+      "Category": "Mechanical",
+      "Plant": "Plant-01",
+      "Criticality": "Normal",
+      "Current_Stock": 120,
+      "Overstock_Threshold": 36.0,
+      "Excess_Qty": 84.0,
+      "Gross_Value": 102000,
+      "Excess_Value_INR": 71400,
+      "Avg_Monthly_Consumption": 18.0,
+      "Lead_Time_Days": 30
+    },
+    {
+      "Material_Code": "MAT-1003",
+      "Description": "V-Belt A-42",
+      "Category": "Mechanical",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "Current_Stock": 200,
+      "Overstock_Threshold": 35.0,
+      "Excess_Qty": 165.0,
+      "Gross_Value": 64000,
+      "Excess_Value_INR": 52800,
+      "Avg_Monthly_Consumption": 35.0,
+      "Lead_Time_Days": 15
+    },
+    {
+      "Material_Code": "MAT-1005",
+      "Description": "Coupling Jaw Insert",
+      "Category": "Mechanical",
+      "Plant": "Plant-03",
+      "Criticality": "Normal",
+      "Current_Stock": 55,
+      "Overstock_Threshold": 11.2,
+      "Excess_Qty": 43.8,
+      "Gross_Value": 66000,
+      "Excess_Value_INR": 52560,
+      "Avg_Monthly_Consumption": 8.0,
+      "Lead_Time_Days": 21
+    },
+    {
+      "Material_Code": "MAT-1007",
+      "Description": "Contactor 32A",
+      "Category": "Electrical",
+      "Plant": "Plant-01",
+      "Criticality": "Normal",
+      "Current_Stock": 85,
+      "Overstock_Threshold": 16.0,
+      "Excess_Qty": 69.0,
+      "Gross_Value": 57800,
+      "Excess_Value_INR": 46920,
+      "Avg_Monthly_Consumption": 12.0,
+      "Lead_Time_Days": 20
+    },
+    {
+      "Material_Code": "MAT-1009",
+      "Description": "Fuse 63A HRC",
+      "Category": "Electrical",
+      "Plant": "Plant-03",
+      "Criticality": "Normal",
+      "Current_Stock": 500,
+      "Overstock_Threshold": 43.3,
+      "Excess_Qty": 456.7,
+      "Gross_Value": 5000,
+      "Excess_Value_INR": 4567,
+      "Avg_Monthly_Consumption": 65.0,
+      "Lead_Time_Days": 10
+    },
+    {
+      "Material_Code": "MAT-1011",
+      "Description": "VFD 7.5kW ABB",
+      "Category": "Automation",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "Current_Stock": 5,
+      "Overstock_Threshold": 3.0,
+      "Excess_Qty": 2.0,
+      "Gross_Value": 190000,
+      "Excess_Value_INR": 76000,
+      "Avg_Monthly_Consumption": 1.0,
+      "Lead_Time_Days": 45
+    },
+    {
+      "Material_Code": "MAT-1012",
+      "Description": "Pressure Transmitter",
+      "Category": "Instrumentation",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "Current_Stock": 14,
+      "Overstock_Threshold": 4.7,
+      "Excess_Qty": 9.3,
+      "Gross_Value": 175000,
+      "Excess_Value_INR": 116250,
+      "Avg_Monthly_Consumption": 2.0,
+      "Lead_Time_Days": 35
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Description": "Temperature Sensor PT100",
+      "Category": "Instrumentation",
+      "Plant": "Plant-01",
+      "Criticality": "Critical",
+      "Current_Stock": 22,
+      "Overstock_Threshold": 6.7,
+      "Excess_Qty": 15.3,
+      "Gross_Value": 70400,
+      "Excess_Value_INR": 48960,
+      "Avg_Monthly_Consumption": 4.0,
+      "Lead_Time_Days": 25
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Description": "Grease Mobilux EP2 (kg)",
+      "Category": "Consumable",
+      "Plant": "Plant-01",
+      "Criticality": "Normal",
+      "Current_Stock": 180,
+      "Overstock_Threshold": 13.1,
+      "Excess_Qty": 166.9,
+      "Gross_Value": 32400,
+      "Excess_Value_INR": 30042,
+      "Avg_Monthly_Consumption": 28.0,
+      "Lead_Time_Days": 7
+    },
+    {
+      "Material_Code": "MAT-1016",
+      "Description": "Hydraulic Oil ISO 46 (L)",
+      "Category": "Consumable",
+      "Plant": "Plant-02",
+      "Criticality": "Normal",
+      "Current_Stock": 420,
+      "Overstock_Threshold": 25.7,
+      "Excess_Qty": 394.3,
+      "Gross_Value": 39900,
+      "Excess_Value_INR": 37458,
+      "Avg_Monthly_Consumption": 55.0,
+      "Lead_Time_Days": 7
+    }
+  ],
+  "understock": [],
+  "pr_suggestions": [
+    {
+      "Material_Code": "MAT-1018",
+      "Description": "Safety Valve 2-inch",
+      "Category": "Mechanical",
+      "Criticality": "Critical",
+      "Current_Stock": 3,
+      "Reorder_Point": 2,
+      "Months_Stock_Remaining": 3.0,
+      "Lead_Time_Days": 60,
+      "Suggested_PR_Date": "2026-10-22",
+      "Suggested_Qty": 3,
+      "PR_Value_INR": 55500,
+      "MRP_Eligible": "Manual Review"
+    }
+  ],
+  "forecast": [
+    {
+      "Month": "2026-10",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 1786902
+    },
+    {
+      "Month": "2026-11",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 1640744
+    },
+    {
+      "Month": "2026-12",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 1494586
+    },
+    {
+      "Month": "2027-01",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 1348428
+    },
+    {
+      "Month": "2027-02",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 1202270
+    },
+    {
+      "Month": "2027-03",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 1056112
+    },
+    {
+      "Month": "2027-04",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 909954
+    },
+    {
+      "Month": "2027-05",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 763796
+    },
+    {
+      "Month": "2027-06",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 617638
+    },
+    {
+      "Month": "2027-07",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 471480
+    },
+    {
+      "Month": "2027-08",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 325322
+    },
+    {
+      "Month": "2027-09",
+      "Forecast_Consumption_Value": 146158,
+      "Forecast_Gross_Inventory_Value": 179164
+    }
+  ],
+  "nm_sm_predictions": [
+    {
+      "Material_Code": "MAT-1014",
+      "Description": "Temperature Sensor PT100",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Recent_3m_Avg": 2.7,
+      "Prior_3m_Avg": 4.0,
+      "Trend_Pct": -33.3,
+      "Gross_Value": 70400,
+      "Risk": "SM Risk"
+    },
+    {
+      "Material_Code": "MAT-1015",
+      "Description": "Grease Mobilux EP2 (kg)",
+      "NM_Flag": false,
+      "SM_Flag": true,
+      "Recent_3m_Avg": 21.7,
+      "Prior_3m_Avg": 27.3,
+      "Trend_Pct": -20.7,
+      "Gross_Value": 32400,
+      "Risk": "SM Risk"
+    }
+  ],
+  "category_breakdown": [
+    {
+      "Category": "Automation",
+      "Gross_Value": 326000,
+      "Material_Count": 2,
+      "NM_Count": 1,
+      "SM_Count": 1
+    },
+    {
+      "Category": "Consumable",
+      "Gross_Value": 73200,
+      "Material_Count": 3,
+      "NM_Count": 1,
+      "SM_Count": 2
+    },
+    {
+      "Category": "Electrical",
+      "Gross_Value": 194560,
+      "Material_Count": 4,
+      "NM_Count": 2,
+      "SM_Count": 2
+    },
+    {
+      "Category": "Instrumentation",
+      "Gross_Value": 329400,
+      "Material_Count": 3,
+      "NM_Count": 1,
+      "SM_Count": 2
+    },
+    {
+      "Category": "Mechanical",
+      "Gross_Value": 1009900,
+      "Material_Count": 6,
+      "NM_Count": 2,
+      "SM_Count": 4
+    }
+  ],
+  "plant_breakdown": [
+    {
+      "Plant": "Plant-01",
+      "Gross_Value": 1224600,
+      "Material_Count": 7
+    },
+    {
+      "Plant": "Plant-02",
+      "Gross_Value": 497060,
+      "Material_Count": 6
+    },
+    {
+      "Plant": "Plant-03",
+      "Gross_Value": 211400,
+      "Material_Count": 5
+    }
+  ],
+  "critical_spares": [
+    {
+      "Material_Code": "MAT-1002",
+      "Description": "Gearbox Assembly 7.5kW",
+      "Category": "Mechanical",
+      "Plant": "Plant-01",
+      "Current_Stock": 4,
+      "Safety_Stock": 2,
+      "Reorder_Point": 3,
+      "Unit_Cost": 175000,
+      "Gross_Value": 700000,
+      "DOH": 9999.0
+    },
+    {
+      "Material_Code": "MAT-1006",
+      "Description": "Motor 11kW 4-Pole",
+      "Category": "Electrical",
+      "Plant": "Plant-01",
+      "Current_Stock": 3,
+      "Safety_Stock": 2,
+      "Reorder_Point": 3,
+      "Unit_Cost": 42000,
+      "Gross_Value": 126000,
+      "DOH": 9999.0
+    },
+    {
+      "Material_Code": "MAT-1010",
+      "Description": "PLC Module Siemens S7",
+      "Category": "Automation",
+      "Plant": "Plant-01",
+      "Current_Stock": 2,
+      "Safety_Stock": 1,
+      "Reorder_Point": 2,
+      "Unit_Cost": 68000,
+      "Gross_Value": 136000,
+      "DOH": 9999.0
+    },
+    {
+      "Material_Code": "MAT-1014",
+      "Description": "Temperature Sensor PT100",
+      "Category": "Instrumentation",
+      "Plant": "Plant-01",
+      "Current_Stock": 22,
+      "Safety_Stock": 6,
+      "Reorder_Point": 10,
+      "Unit_Cost": 3200,
+      "Gross_Value": 70400,
+      "DOH": 165.0
+    },
+    {
+      "Material_Code": "MAT-1018",
+      "Description": "Safety Valve 2-inch",
+      "Category": "Mechanical",
+      "Plant": "Plant-03",
+      "Current_Stock": 3,
+      "Safety_Stock": 1,
+      "Reorder_Point": 2,
+      "Unit_Cost": 18500,
+      "Gross_Value": 55500,
+      "DOH": 90.0
+    }
+  ],
+  "data_quality": {
+    "date_range": "2025-10 to 2026-09",
+    "total_consumption_rows": 216,
+    "total_materials": 18,
+    "zero_avg_consumption_materials": [
+      "MAT-1002",
+      "MAT-1004",
+      "MAT-1006",
+      "MAT-1008",
+      "MAT-1010",
+      "MAT-1013",
+      "MAT-1017"
+    ],
+    "no_movement_12m": [
+      "MAT-1002",
+      "MAT-1004",
+      "MAT-1006",
+      "MAT-1008",
+      "MAT-1010",
+      "MAT-1013",
+      "MAT-1017"
+    ],
+    "missing_fields": [
+      "GR History",
+      "PO History",
+      "Open PR List",
+      "Shutdown Schedule Dates"
+    ],
+    "duplicate_material_codes": "None identified \u2014 no exact description duplicates across 18 materials",
+    "nm_flagged": [
+      "MAT-1002",
+      "MAT-1004",
+      "MAT-1006",
+      "MAT-1008",
+      "MAT-1010",
+      "MAT-1013",
+      "MAT-1017"
+    ],
+    "sm_flagged": [
+      "MAT-1001",
+      "MAT-1003",
+      "MAT-1005",
+      "MAT-1007",
+      "MAT-1009",
+      "MAT-1011",
+      "MAT-1012",
+      "MAT-1014",
+      "MAT-1015",
+      "MAT-1016",
+      "MAT-1018"
+    ],
+    "data_completeness_pct": 94.4,
+    "notes": [
+      "7 NM-flagged materials: zero consumption across 12-month window",
+      "11 SM-flagged materials: below-threshold consumption velocity",
+      "GR/PO history absent \u2014 reorder point validation against actual lead times not possible",
+      "Open PR list absent \u2014 double-ordering risk cannot be assessed",
+      "Shutdown schedule absent \u2014 planned consumption spikes not modelled",
+      "Unit costs validated: \u20b910 (Fuse 63A HRC) to \u20b9175,000 (Gearbox Assembly 7.5kW)"
+    ]
+  }
+}
