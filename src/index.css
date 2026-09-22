@@ -111,6 +111,38 @@ input, select { font-family: inherit; }
   .tab-bar-scroll { padding: 0 12px; }
 }
 
+/* ── KPI card hover (F10a fix — CSS hover, no JS event handlers) ────── */
+.kpi-card:hover {
+  background: var(--surface-2) !important;
+}
+
+/* ── Table row hover (F6a fix) ───────────────────────────────────────── */
+/* Applied via JS className on <tr> to avoid specificity wars with inline styles */
+tr.data-row:hover td {
+  background: var(--surface-2) !important;
+  transition: background 0.15s;
+}
+
+/* Generic tbody tr hover for tables that don't use .data-row */
+tbody tr:hover td {
+  background: var(--surface-2) !important;
+  transition: background 0.15s;
+}
+
+/* ── Section toggle buttons (F6b fix) ───────────────────────────────── */
+/* Buttons that use aria-pressed for section selection */
+button[aria-pressed] {
+  transition: background 0.15s, color 0.15s;
+}
+button[aria-pressed]:hover {
+  background: var(--surface-2) !important;
+}
+button[aria-pressed="true"] {
+  /* active state already set inline; ensure hover doesn't override accent */
+  background: var(--accent) !important;
+  color: #0f172a !important;
+}
+
 /* ── Reduced motion ──────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

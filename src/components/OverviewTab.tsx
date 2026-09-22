@@ -54,9 +54,10 @@ export default function OverviewTab({ data }: { data: any }) {
       <div className="charts-grid" style={{ display: "grid", gap: 16 }}>
         {/* Category Breakdown */}
         <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: 20 }}>
-          <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
+          <div id="chart-cat-heading" style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
             Gross Value by Category
           </div>
+          <div role="img" aria-labelledby="chart-cat-heading" aria-label="Bar chart showing gross inventory value broken down by material category">
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={category_breakdown} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2)" />
@@ -71,16 +72,18 @@ export default function OverviewTab({ data }: { data: any }) {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+          </div>
         </div>
 
         {/* Plant Breakdown */}
         <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: 20 }}>
-          <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
+          <div id="chart-plant-heading" style={{ fontSize: 13, fontWeight: 600, marginBottom: 16, color: "var(--text)" }}>
             Gross Value by Plant
           </div>
+          <div role="img" aria-labelledby="chart-plant-heading" aria-label="Bar chart showing gross inventory value broken down by plant">
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={plant_breakdown} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2)" />
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--surface-2);" />
               <XAxis dataKey="Plant" tick={{ fill: "var(--text-muted)", fontSize: 11 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: "var(--text-muted)", fontSize: 10 }} axisLine={false} tickLine={false}
                 tickFormatter={(v) => `₹${(v/100000).toFixed(1)}L`} />
@@ -92,6 +95,7 @@ export default function OverviewTab({ data }: { data: any }) {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+          </div>
         </div>
       </div>
 
