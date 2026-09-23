@@ -52,15 +52,8 @@ export default function PRTab({ data }: { data: any }) {
           <span style={{ fontSize: 12, color: "var(--text-muted)" }}>Sorted by Criticality → PR Date</span>
         </div>
         {pr_suggestions.length === 0 ? (
-          <div style={{ padding: 40, textAlign: "center", color: "var(--text-muted)", fontSize: 13 }}>
-            <div style={{ fontSize: 28, marginBottom: 12 }}>✅</div>
-            <div style={{ fontWeight: 600, color: "var(--text)", fontSize: 14, marginBottom: 6 }}>
-              No PR suggestions at current stock levels
-            </div>
-            <div style={{ fontSize: 12, color: "var(--text-muted)", maxWidth: 360, margin: "0 auto" }}>
-              All materials are above their reorder points. Check the <strong>Alerts</strong> tab
-              if you expect understocked items, or review reorder points in <strong>Data Quality</strong>.
-            </div>
+          <div style={{ padding: 32, textAlign: "center", color: "var(--text-muted)", fontSize: 13 }}>
+            No PR suggestions at current stock levels.
           </div>
         ) : (
           <div style={{ overflowX: "auto" }}>
