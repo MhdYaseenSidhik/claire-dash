@@ -1,0 +1,3 @@
+# Dependencies for the SAP HANA enumeration script (scripts/list_hana_tables.py)
+# Official SAP HANA Python client (DBAPI).
+hdbcli>=2.19
