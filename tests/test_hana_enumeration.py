@@ -243,3 +243,64 @@ class TestReadOnlyCatalogAccess:
         """The connection is closed after enumeration (no leaked session)."""
         rows = mod.fetch_tables(config)
         assert rows == CATALOG_ROWS
+
+
+# ---------------------------------------------------------------------------
+# AC-4  Credentials come from the environment / .env — never hardcoded
+# ---------------------------------------------------------------------------
+class TestNoHardcodedSecrets:
+    """Verify the script source contains no literal credential values."""
+
+    def _script_source(self) -> str:
+        return SCRIPT_PATH.read_text()
+
+    def test_read_config_reads_from_os_environ(self, monkeypatch):
+        """AC-4: read_config() pulls every credential from os.environ."""
+        monkeypatch.setenv("HANA_HOST", "test-host.example.com")
+        monkeypatch.setenv("HANA_USER", "test_user")
+        monkeypatch.setenv("HANA_PASSWORD", "test_pass")
+        monkeypatch.setenv("HANA_PORT", "443")
+        cfg = mod.read_config()
+        assert cfg["address"] == "test-host.example.com"
+        assert cfg["user"] == "test_user"
+        assert cfg["password"] == "test_pass"
+
+    def test_read_config_fails_without_env_vars(self, monkeypatch):
+        """AC-4: missing credentials cause a clean exit(2), not a traceback."""
+        for key in ("HANA_HOST", "HANA_USER", "HANA_PASSWORD"):
+            monkeypatch.delenv(key, raising=False)
+        with pytest.raises(SystemExit) as exc:
+            mod.read_config()
+        assert exc.value.code == 2
+
+    def test_no_literal_password_in_source(self):
+        """AC-4: the script source contains no literal password value."""
+        src = self._script_source()
+        # The only appearances of 'password' in source must be env-var names or
+        # dict keys — never a literal credential string like 'password': 'secret'.
+        import re
+        # Match any quoted non-empty string assigned to a password key
+        literal_cred = re.search(
+            r'["\']password["\']\s*:\s*["\'](?!{)[^"\']{4,}["\']',
+            src, re.IGNORECASE
+        )
+        assert literal_cred is None, (
+            f"Possible hardcoded password literal found: {literal_cred.group()!r}"
+        )
+
+    def test_env_example_has_no_real_credentials(self):
+        """AC-4: .env.example defines keys but leaves values empty."""
+        env_example = SCRIPT_PATH.resolve().parent.parent / ".env.example"
+        assert env_example.exists(), ".env.example is missing"
+        for line in env_example.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "=" in line:
+                key, _, value = line.partition("=")
+                value = value.strip().strip('"').strip("'")
+                # Values should be empty or a safe default (port number, 'true')
+                assert value == "" or value.isdigit() or value.lower() in ("true", "false"), (
+                    f".env.example line {line!r} looks like a real credential — "
+                    "it should only contain empty values or safe defaults"
+                )
